@@ -25,7 +25,7 @@ ENV GGML_CUDA=1
 # Enable cURL
 ENV LLAMA_CURL=1
 
-RUN make -j$(nproc) llama-server
+RUN make llama-server
 
 FROM ${BASE_CUDA_RUN_CONTAINER} as runtime
 
